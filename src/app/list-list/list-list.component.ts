@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { Person } from '../models/persons.model'
 
 @Component({
   selector: 'app-list-list',
@@ -7,6 +8,11 @@ import { Component, Input } from '@angular/core';
 })
 
 export class ListListComponent {
+  @Input() arrPersons: Person[] = [];
 
+  eraseLastPerson() {
+    this.arrPersons.pop();
+  }
 }
+
 

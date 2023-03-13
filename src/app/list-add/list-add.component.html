@@ -1,0 +1,13 @@
+<div>
+  <div>
+    <label for="name">Name</label>
+    <input type="text" id="name" [(ngModel)]="name">
+  </div>
+  <div>
+    <label for="last_name">Last name</label>
+    <input type="text" id="last_name" [(ngModel)]="lastName">
+  </div>
+  <div>
+    <button (click)="sendPerson()">Send person!</button>
+  </div>
+</div>
