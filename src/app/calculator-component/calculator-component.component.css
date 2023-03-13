@@ -1,0 +1,16 @@
+.calculator {
+  background: grey;
+  height: 480px;
+  width: 480px;
+}
+
+.mini-line {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.miniButton {
+  justify-self: center;
+  border: solid 2px black;
+  width: 40px;
+}
