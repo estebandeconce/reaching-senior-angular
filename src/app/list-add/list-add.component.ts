@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Output } from '@angular/core';
-import { Person } from '../models/persons.model'
+import { Task } from '../models/persons.model'
 
 
 @Component({
@@ -9,7 +9,7 @@ import { Person } from '../models/persons.model'
 })
 
 export class ListAddComponent {
-  @Output() outPerson = new EventEmitter<Person>
+  @Output() outPerson = new EventEmitter<Task>
   name: string;
   lastName: string;
 
@@ -19,7 +19,7 @@ export class ListAddComponent {
   }
 
   sendPerson() {
-    let person = new Person(this.name, this.lastName);
+    let person = new Task(this.name, this.lastName);
     this.outPerson.emit(person);
   }
 }

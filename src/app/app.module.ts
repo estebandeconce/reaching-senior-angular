@@ -16,6 +16,8 @@ import { BindingComponent } from './binding/binding.component';
 import { FormsModule } from '@angular/forms';
 import { ListAddComponent } from './list-add/list-add.component';
 import { ListListComponent } from './list-list/list-list.component';
+import { CreateTaskComponent } from './create-task/create-task.component';
+import { ListTaskComponent } from './list-task/list-task.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +33,9 @@ import { ListListComponent } from './list-list/list-list.component';
     NewCronometerComponent,
     BindingComponent,
     ListAddComponent,
-    ListListComponent
+    ListListComponent,
+    CreateTaskComponent,
+    ListTaskComponent
   ],
   imports: [
     BrowserModule,

@@ -1,9 +1,10 @@
-export class Person {
-  name: string;
-  lastName: string;
+export class Task {
+  title: string;
+  description: string;
+  isCompleted: boolean;
 
-  constructor(name: string = '', lastName: string = '') {
-    this.name = name;
-    this.lastName = lastName;
+  constructor(title: string = '', description: string = '', isCompleted: boolean = false) {
+    this.title = title;
+    this.description = description;
   }
 }
