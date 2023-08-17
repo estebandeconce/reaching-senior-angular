@@ -18,6 +18,8 @@ import { ListAddComponent } from './list-add/list-add.component';
 import { ListListComponent } from './list-list/list-list.component';
 import { CreateTaskComponent } from './create-task/create-task.component';
 import { ListTaskComponent } from './list-task/list-task.component';
+import { FoodComponent } from './menu-app/food/food.component';
+import { InvoiceComponent } from './menu-app/invoice/invoice.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +37,9 @@ import { ListTaskComponent } from './list-task/list-task.component';
     ListAddComponent,
     ListListComponent,
     CreateTaskComponent,
-    ListTaskComponent
+    ListTaskComponent,
+    FoodComponent,
+    InvoiceComponent
   ],
   imports: [
     BrowserModule,
