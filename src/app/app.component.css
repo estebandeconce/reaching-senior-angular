@@ -1,0 +1,12 @@
+.container {
+  display: flex;
+
+  .food-list-container {
+    background: gray;
+    width: 75%;
+  }
+  .invoice-container {
+    background: gainsboro;
+    width: 25%;
+  }
+}

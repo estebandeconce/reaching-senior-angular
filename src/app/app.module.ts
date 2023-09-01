@@ -20,6 +20,7 @@ import { CreateTaskComponent } from './create-task/create-task.component';
 import { ListTaskComponent } from './list-task/list-task.component';
 import { FoodComponent } from './menu-app/food/food.component';
 import { InvoiceComponent } from './menu-app/invoice/invoice.component';
+import { FatherOututComponent } from './father-outut/father-outut.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import { InvoiceComponent } from './menu-app/invoice/invoice.component';
     CreateTaskComponent,
     ListTaskComponent,
     FoodComponent,
-    InvoiceComponent
+    InvoiceComponent,
+    FatherOututComponent
   ],
   imports: [
     BrowserModule,
