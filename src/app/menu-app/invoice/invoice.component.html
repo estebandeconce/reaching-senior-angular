@@ -1,7 +1,0 @@
-<h6>Invoice</h6>
-<h4>Total = {{ totalInvoice() }}</h4>
-<div class="product" *ngFor="let product of foodList; index as i" (click)="removeProduct(i)">
-  <p>Nombre: {{ product.name }}</p>
-  <p>Cantidad: {{ product.quantity }}</p>
-  <p>Precio: {{ product.price * product.quantity}}</p>
-</div>

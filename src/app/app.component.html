@@ -1,12 +1,3 @@
 <h1>Main component 🔥</h1>
 
-<div class="container">
-  <div class="food-list-container">
-    <!--The component app-food is for a LIST of food-->
-    <app-food title="Food" [products]="listOfFood" (productSelected)="clickProduct($event)"></app-food>
-    <app-food title="Drinks" [products]="listOfDrinks" (productSelected)="clickProduct($event)"></app-food>
-  </div>
-  <div class="invoice-container">
-    <app-invoice [foodList]="productsSelectedArray"></app-invoice>
-  </div>
-</div>
+<app-father-outut></app-father-outut>

@@ -21,6 +21,7 @@ import { ListTaskComponent } from './list-task/list-task.component';
 import { FoodComponent } from './menu-app/food/food.component';
 import { InvoiceComponent } from './menu-app/invoice/invoice.component';
 import { FatherOututComponent } from './father-outut/father-outut.component';
+import { ChildOutputComponent } from './child-output/child-output.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,8 @@ import { FatherOututComponent } from './father-outut/father-outut.component';
     ListTaskComponent,
     FoodComponent,
     InvoiceComponent,
-    FatherOututComponent
+    FatherOututComponent,
+    ChildOutputComponent
   ],
   imports: [
     BrowserModule,

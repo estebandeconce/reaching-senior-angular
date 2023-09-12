@@ -1,8 +1,0 @@
-<h3>{{ title }}</h3>
-<div class="products-container">
-  <div class="product" *ngFor="let product of products" (click)="sendProduct(product)">
-    <img class="product-img" src="{{ product.imgUrl }}">
-    <p>Name: {{ product.name }}</p>
-    <p>Price: {{ product.price }}</p>
-  </div>
-</div>
