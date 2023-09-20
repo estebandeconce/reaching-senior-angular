@@ -1,0 +1,10 @@
+<app-food-add (productAdded)="onProductAdded($event)"></app-food-add>
+<div class="grid">
+  <div class="column">
+    <app-food-list [foodList]="productsList" [isOnCart]="false"
+      (productBought)="onProductBought($event)"></app-food-list>
+  </div>
+  <div class="column">
+    <app-food-list [foodList]="shopList" [isOnCart]="true"></app-food-list>
+  </div>
+</div>

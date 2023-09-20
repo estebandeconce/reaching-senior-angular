@@ -1,0 +1,8 @@
+<div class="container">
+  <div class="food-container" *ngFor="let food of foodList; index as i" (click)="eraseFood(i)">
+    <div>{{ food.name }}</div>
+    <div>{{ food.department }}</div>
+    <div>{{ food.quantity }}</div>
+    <button (click)="buyProduct(food)">{{ isOnCart? 'Buy it! 💸': 'Add to cart! 🛒' }} </button>
+  </div>
+</div>

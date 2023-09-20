@@ -1,0 +1,13 @@
+<div class="container">
+  <h2>Add your food!</h2>
+  <label for="">Food name</label>
+  <input type="text" id="name" [(ngModel)]="foodName">
+  <label for="quantity">Quantity</label>
+  <input type="range" name="quantity" id="" [(ngModel)]="foodQuantity" min="0" max="10" value="1">
+  <label for="department">Select department</label>
+  <select name="department" [(ngModel)]="foodDepartment">
+    <option value="">Please select a department</option>
+    <option *ngFor="let department of departments" value="{{department}}">{{department}}</option>
+  </select>
+  <button class="send-button" (click)="addFood(foodName, foodQuantity, foodDepartment)">Add</button>
+</div>
