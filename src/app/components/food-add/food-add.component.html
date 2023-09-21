@@ -2,7 +2,7 @@
   <h2>Add your food!</h2>
   <label for="">Food name</label>
   <input type="text" id="name" [(ngModel)]="foodName">
-  <label for="quantity">Quantity</label>
+  <label for="quantity">Quantity: {{ foodQuantity }}</label>
   <input type="range" name="quantity" id="" [(ngModel)]="foodQuantity" min="0" max="10" value="1">
   <label for="department">Select department</label>
   <select name="department" [(ngModel)]="foodDepartment">

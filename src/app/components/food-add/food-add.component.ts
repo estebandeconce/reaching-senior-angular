@@ -10,7 +10,7 @@ import { Product } from 'src/app/models/product.model';
 
 export class FoodAddComponent {
 
-  @Output() productAdded = new EventEmitter<Product>
+  @Output() productAdded: EventEmitter<Product>
 
   productList: Product[];
   foodName: string;
@@ -20,6 +20,7 @@ export class FoodAddComponent {
   departments: Department[] = [Department.MEATS, Department.SWEETS, Department.SALTS, Department.DRINKS];
 
   constructor() {
+    this.productAdded = new EventEmitter();
     this.productList = [];
     this.foodQuantity = 1;
   }

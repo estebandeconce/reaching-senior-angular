@@ -10,7 +10,11 @@ export class FoodListComponent {
 
   @Input() foodList: Product[];
   @Input() isOnCart: boolean;
-  @Output() productBought = new EventEmitter<Product>;
+  @Output() productBought: EventEmitter<Product>;
+
+  constructor() {
+    this.productBought = new EventEmitter();
+  }
 
   eraseFood(index: number): void {
     this.foodList.splice(index, 1);
