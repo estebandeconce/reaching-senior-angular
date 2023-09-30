@@ -1,13 +1,17 @@
 <h1>HEADER</h1>
 
-<div>
-  <ul>
-    <li><a [routerLink]="['/about']">About</a></li>
-    <li><a [routerLink]="['/contact']">Contact</a></li>
-    <li><a [routerLink]="['/info']">Info</a></li>
-  </ul>
-</div>
+<ul>
+  <li><a [routerLink]="['/about']">About</a></li>
+  <li><a [routerLink]="['/contact']">Contact</a></li>
+  <li><a [routerLink]="['/info']">Info</a></li>
+</ul>
 
 <router-outlet />
+
+<ul>
+  <li><button (click)="routerTo('about')">About</button></li>
+  <li><button (click)="routerTo('contact')">Contact</button></li>
+  <li><button (click)="routerTo('info')">Info</button></li>
+</ul>
 
 <h1>FOOTER</h1>
