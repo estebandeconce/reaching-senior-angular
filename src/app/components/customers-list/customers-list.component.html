@@ -1,0 +1,9 @@
+<h1 (click)="showActiveCustomers()">Filter</h1>
+
+<div *ngFor="let customer of arrCustomers">
+  <ul>
+    <li>Name: {{ customer.name }}</li>
+    <li>Last name: {{ customer.lastName }}</li>
+    <li>Age: {{ customer.age }}</li>
+  </ul>
+</div>
