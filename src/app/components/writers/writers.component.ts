@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { WRITERS } from 'src/app/mocks/writers.mock';
 import { Writer } from 'src/app/models/writer.model';
+import { WritersService } from 'src/app/services/writers.service';
 
 @Component({
   selector: 'app-writers',
@@ -8,13 +8,22 @@ import { Writer } from 'src/app/models/writer.model';
   styleUrls: ['./writers.component.css']
 })
 export class WritersComponent {
+  country: string;
   arrWriters: Writer[];
 
-  constructor() {
+  constructor(private writersService: WritersService) {
     this.arrWriters = [];
   }
 
   ngOnInit() {
-    this.arrWriters = WRITERS;
+    this.arrWriters = this.writersService.getAll();
+  }
+
+  async filterByCountry(event: Event) {
+    try {
+      this.arrWriters = await this.writersService.getByCountry((event.target as HTMLSelectElement).value);
+    } catch (error) {
+      console.log(error);
+    }
   }
 }
