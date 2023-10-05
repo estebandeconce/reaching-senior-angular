@@ -1,0 +1,14 @@
+.writer {
+  border: 2px solid black;
+  border-radius: 4px;
+  display: inline-block;
+  margin: 2px;
+  .data-writer {
+    margin-right: 36px;
+  }
+  .writer-photo {
+    display: block;
+    margin: 0 auto;
+    width: 150px;
+  }
+}

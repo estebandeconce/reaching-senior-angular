@@ -1,0 +1,15 @@
+<div class="main-container">
+  <div class="writer">
+    <ul class="data-writer">
+      <li>{{ writer.name }} {{ writer.lastNames }}</li>
+      <li>{{ writer.country }}</li>
+    </ul>
+    <img src="{{ writer.image }}" class="writer-photo">
+  </div>
+</div>
+
+<div>
+  <ul>
+    <li *ngFor="let book of books">{{ book.title }}, {{ book.publicationYear }}</li>
+  </ul>
+</div>

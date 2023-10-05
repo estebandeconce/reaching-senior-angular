@@ -7,12 +7,14 @@ import { FormsModule } from '@angular/forms';
 
 import { MainComponent } from './components/main/main.component';
 import { WritersComponent } from './components/writers/writers.component';
+import { BookListComponent } from './components/book-list/book-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MainComponent,
     WritersComponent,
+    BookListComponent,
   ],
   imports: [
     BrowserModule,

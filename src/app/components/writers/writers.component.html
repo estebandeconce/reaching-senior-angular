@@ -1,14 +1,14 @@
 <select (change)="filterByCountry($event)" title="Select a country" id="country" autocomplete="off"
   class="select-country">
   <option disabled selected>Pick a country</option>
-  <option value="canadá">Canadá</option>
-  <option value="chile">Chile</option>
-  <option value="españa">España</option>
-  <option value="reino unido">Reino unido</option>
+  <option value="canadá" id="CANADA">Canadá</option>
+  <option value="chile" name="CHILE">Chile</option>
+  <option value="españa" name="CANADA">España</option>
+  <option value="reino unido" name="REINOUNIDO">Reino unido</option>
 </select>
 
 <div class="main-container">
-  <div class="writer" *ngFor="let writer of arrWriters">
+  <div class="writer" *ngFor="let writer of arrWriters" (click)="goToWriter(writer.id)">
     <ul class="data-writer">
       <li>{{ writer.name }} {{ writer.lastNames }}</li>
       <li>{{ writer.country }}</li>
