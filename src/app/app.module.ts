@@ -6,11 +6,15 @@ import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
 
 import { MainComponent } from './components/main/main.component';
+import { TemplateComponent } from './components/template/template.component';
+import { ModelComponent } from './components/model/model.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MainComponent,
+    TemplateComponent,
+    ModelComponent,
   ],
   imports: [
     BrowserModule,
