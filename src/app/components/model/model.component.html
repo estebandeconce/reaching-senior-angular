@@ -1,1 +1,36 @@
-<p>model works!</p>
+<form [formGroup]="formG" (ngSubmit)="onSubmit(formG)">
+  <div class="form-group">
+    <label for="">Name</label>
+    <input type="text" class="form-control" formControlName="name">
+  </div>
+  <div class="form-group">
+    <label for="">Last name</label>
+    <input type="text" class="form-control" formControlName="lastName">
+  </div>
+  <div class="form-group">
+    <label for="">Age</label>
+    <input type="number" class="form-control" formControlName="age">
+  </div>
+  <div class="form-group">
+    <label for="">Email</label>
+    <input type="email" class="form-control" formControlName="email">
+  </div>
+  <div class="form-group">
+    <label for="">DNI</label>
+    <input type="text" class="form-control" formControlName="dni">
+  </div>
+  <div class="form-group">
+    <label for="">Password</label>
+    <input type="password" class="form-control" formControlName="password">
+  </div>
+  <div class="form-group">
+    <label for="">Repeat password</label>
+    <input type="password" class="form-control" formControlName="passwordConfirm">
+  </div>
+  <br>
+  <div class="d-grid gap-2">
+    <input type="submit" value="Send 📩" class="btn btn-block btn-success">
+  </div>
+</form>
+<br>
+{{ formG.value | json }}
