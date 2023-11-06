@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-model',
@@ -11,10 +11,17 @@ export class ModelComponent {
 
   constructor() {
     this.formG = new FormGroup({
-      age: new FormControl(''),
+      age: new FormControl('', [
+        this.legalAge
+      ]),
       dni: new FormControl(''),
-      email: new FormControl(''),
-      name: new FormControl(''),
+      email: new FormControl('', [
+        Validators.required,
+        Validators.pattern(/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*\.[a-zA-Z]{2,}$/)
+      ]),
+      name: new FormControl('', [
+        Validators.required
+      ]),
       lastName: new FormControl(''),
       password: new FormControl(''),
       passwordConfirm: new FormControl(''),
@@ -24,4 +31,12 @@ export class ModelComponent {
   onSubmit(formGroup: FormGroup) {
 
   }
+
+  legalAge(control) {
+    const age = control.value;
+    const MIN = 18;
+    const error = age < MIN ? { legalAge: 'You must be at least 18 years old to register.' } : null;
+    return error;
+  }
+
 }
