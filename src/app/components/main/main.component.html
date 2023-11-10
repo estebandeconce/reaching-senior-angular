@@ -1,1 +1,26 @@
-<p>main works!</p>
+<form [formGroup]="myForm" (ngSubmit)="onSubmit(myForm)">
+  <div class="form-group">
+    <label>
+      Enter your name
+      <input type="text" formControlName="name">
+    </label>
+  </div>
+
+  <div class="form-group">
+    <label>
+      Enter your password
+      <input type="text" formControlName="password">
+    </label>
+    <ul>
+      <li>8 or more characters ❌</li>
+      <li>1 or more special characters (! . _ # + -) ❌</li>
+      <li>2 or more numbers ❌</li>
+    </ul>
+  </div>
+
+  <div class="form-group">
+    <label>
+
+    </label>
+  </div>
+</form>
